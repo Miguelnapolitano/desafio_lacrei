@@ -1,0 +1,79 @@
+POST http://localhost:8000/api/professional/
+Content-Type: application/json
+
+{
+    "first_name": "Miguel",
+    "last_name": "Napolitano",
+    "username": "Miguel2",
+    "email": "miguel.napolitano2@live.com",
+    "password": "123",
+    "profession": "Doctor",
+    "address": {
+        "street": "Luiz de Queiroz",
+        "number": 1150,
+        "complement": "Ap 11",
+        "city": "Piracicaba",
+        "state": "SP", 
+        "zip_code": "13400-780",
+        "neighborhood": "Centro"
+    }
+}
+
+###
+
+PATCH http://localhost:8000/api/professional/ab5cf6dd737a43508b4264a513985245/
+Content-Type: application/json
+
+{
+    "profession": "Psycologist"
+}
+
+###
+
+DELETE http://localhost:8000/api/professional/6d434f354e104c2a8df21c641b28d78b/
+
+
+###
+
+GET http://localhost:8000/api/professional/ab5cf6dd737a43508b4264a513985245/
+
+
+###
+
+GET http://localhost:8000/api/professional/
+
+
+###
+POST http://localhost:8000/api/visit/
+Content-Type: application/json
+
+{
+    "date": "2024-07-09 09:00:00",
+    "professional": "ef0dc211-94bd-458f-bb2d-a36dde69777e"
+}
+
+###
+
+PATCH http://localhost:8000/api/visit/86e14943-7c8f-4e32-b2df-73de56073213/
+Content-Type: application/json
+
+{
+    "date": "2024-07-10 08:30:00"
+}
+
+###
+
+DELETE http://localhost:8000/api/visit/36c7a69b-1e0a-45e3-9697-115c1befbe29/
+
+
+###
+
+GET http://localhost:8000/api/visit/36c7a69b-1e0a-45e3-9697-115c1befbe29/
+
+###
+
+GET http://localhost:8000/api/visit/
+
+###
+
+GET http://localhost:8000/api/visit/get_by_professional?professional=ef0dc211-94bd-458f-bb2d-a36dde69777e
